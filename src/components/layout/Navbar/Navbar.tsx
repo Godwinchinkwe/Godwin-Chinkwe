@@ -9,7 +9,7 @@ import styles from "./Navbar.module.css";
 import ThemeToggle from "@/components/ui/ThemeToggle/ThemeToggle";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
+  { name: "Home", href: "/" },
   { name: "About", href: "#about" },
   { name: "Expertise", href: "#expertise" },
   { name: "Projects", href: "#projects" },
@@ -40,19 +40,10 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`${styles.navbar} ${
-        isScrolled ? styles.scrolled : ""
-      }`}
-    >
+    <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-
         {/* Logo */}
-        <Link
-          href="/"
-          className={styles.logo}
-          onClick={closeMenu}
-        >
+        <Link href="/" className={styles.logo} onClick={closeMenu}>
           <span className={styles.logoMark}>G</span>
 
           <span className={styles.logoText}>
@@ -63,42 +54,19 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={styles.navLink}
-            >
+            <Link key={link.name} href={link.href} className={styles.navLink}>
               {link.name}
             </Link>
           ))}
         </nav>
 
-
-
-
-
         {/* Desktop Actions */}
         <div className={styles.actions}>
 
-          {/* Theme Toggle */}
-          {/* <button
-            type="button"
-            className={styles.iconButton}
-            onClick={() =>
-              setTheme(theme === "dark" ? "light" : "dark")
-            }
-            aria-label="Toggle theme"
-          >
-            <Sun className={styles.sunIcon} />
-            <Moon className={styles.moonIcon} />
-          </button> */}
-           <ThemeToggle />
+          <ThemeToggle />
 
           {/* CTA */}
-          <Link
-            href="#contact"
-            className={styles.cta}
-          >
+          <Link href="#contact" className={styles.cta}>
             Let's Talk
           </Link>
         </div>
@@ -109,17 +77,11 @@ export default function Navbar() {
           className={styles.mobileMenuButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={
-            isMenuOpen
-              ? "Close navigation menu"
-              : "Open navigation menu"
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
           }
           aria-expanded={isMenuOpen}
         >
-          {isMenuOpen ? (
-            <X size={24} />
-          ) : (
-            <Menu size={24} />
-          )}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 

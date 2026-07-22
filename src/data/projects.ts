@@ -4,8 +4,7 @@ export const projects: Project[] = [
   {
     slug: "airport-golden-tulip-hotel",
 
-    title:
-      "Airport Golden Tulip Hotel",
+    title: "Airport Golden Tulip Hotel",
 
     shortDescription:
       "A modern hotel website designed to showcase rooms, services, and drive direct bookings.",
@@ -13,34 +12,21 @@ export const projects: Project[] = [
     description:
       "A premium hotel website designed to provide travelers with a seamless digital experience while helping the hotel increase visibility and encourage direct booking inquiries.",
 
-    category:
-      "Full-Stack",
+    category: "Full-Stack",
 
-    technologies: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-    ],
+    technologies: ["Next.js", "React", "Node.js", "Express", "MongoDB"],
 
-    image:
-      "/images/projects/airport-golden-tulip.png",
+    image: "/images/projects/airport-golden-tulip.png",
 
-    liveUrl:
-      "https://airportgoldentuliphotel.com",
+    liveUrl: "https://airportgoldentuliphotel.com",
 
-    githubUrl:
-      "",
+    githubUrl: "",
 
-    featured:
-      true,
+    featured: true,
 
-    year:
-      "2026",
+    year: "2026",
 
-    role:
-      "Frontend & Full-Stack Developer",
+    role: "Frontend & Full-Stack Developer",
 
     challenge:
       "The goal was to create a professional digital presence for the hotel that could showcase its rooms, amenities, and services while making it easier for potential guests to discover the hotel and initiate booking inquiries.",
@@ -66,11 +52,9 @@ export const projects: Project[] = [
   },
 
   {
-    slug:
-      "geeluxe-store",
+    slug: "geeluxe-store",
 
-    title:
-      "Geeluxe Store",
+    title: "Geeluxe Store",
 
     shortDescription:
       "A luxury e-commerce experience for watches and fashion accessories.",
@@ -78,33 +62,21 @@ export const projects: Project[] = [
     description:
       "A modern e-commerce concept focused on presenting luxury watches and accessories through a clean and visually engaging shopping experience.",
 
-    category:
-      "Frontend",
+    category: "Frontend",
 
-    technologies: [
-      "React",
-      "JavaScript",
-      "CSS",
-      "Responsive Design",
-    ],
+    technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
 
-    image:
-      "/images/projects/geeluxe-store.jpeg",
+    image: "/images/projects/geeluxe-store.jpeg",
 
-    liveUrl:
-      "https://geeluxe.store",
+    liveUrl: "https://geeluxe.store",
 
-    githubUrl:
-      "",
+    githubUrl: "",
 
-    featured:
-      true,
+    featured: true,
 
-    year:
-      "2026",
+    year: "2026",
 
-    role:
-      "Frontend Developer",
+    role: "Frontend Developer",
 
     challenge:
       "The goal was to create an online shopping experience that presents fashion accessories in a premium and visually appealing way while remaining easy to navigate across mobile and desktop devices.",
@@ -128,11 +100,9 @@ export const projects: Project[] = [
   },
 
   {
-    slug:
-      "business-platform",
+    slug: "business-platform",
 
-    title:
-      "Business Management Platform",
+    title: "Business Management Platform",
 
     shortDescription:
       "A scalable web application designed to streamline business operations.",
@@ -140,34 +110,21 @@ export const projects: Project[] = [
     description:
       "A full-stack platform concept designed to help businesses manage operational workflows, data, and customer interactions through a centralized system.",
 
-    category:
-      "Full-Stack",
+    category: "Full-Stack",
 
-    technologies: [
-      "Next.js",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "REST API",
-    ],
+    technologies: ["Next.js", "Node.js", "Express", "MongoDB", "REST API"],
 
-    image:
-      "/images/projects/business-platform.jpeg",
+    image: "/images/projects/business-platform.jpeg",
 
-    liveUrl:
-      "",
+    liveUrl: "",
 
-    githubUrl:
-      "",
+    githubUrl: "",
 
-    featured:
-      true,
+    featured: true,
 
-    year:
-      "2026",
+    year: "2026",
 
-    role:
-      "Full-Stack Developer",
+    role: "Full-Stack Developer",
 
     challenge:
       "The project required a scalable architecture capable of supporting multiple business workflows while keeping the user experience simple and intuitive.",

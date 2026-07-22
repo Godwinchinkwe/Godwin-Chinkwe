@@ -10,16 +10,10 @@ type BlogCardProps = {
   post: BlogPost;
 };
 
-export default function BlogCard({
-  post,
-}: BlogCardProps) {
+export default function BlogCard({ post }: BlogCardProps) {
   return (
     <article className={styles.card}>
-
-      <Link
-        href={`/blog/${post.slug}`}
-        className={styles.imageWrapper}
-      >
+      <Link href={`/blog/${post.slug}`} className={styles.imageWrapper}>
         <Image
           src={post.image}
           alt={post.title}
@@ -34,51 +28,27 @@ export default function BlogCard({
       </Link>
 
       <div className={styles.content}>
-
         <div className={styles.meta}>
+          <span>{post.category}</span>
 
-          <span>
-            {post.category}
-          </span>
-
-          <span>
-            {post.readingTime}
-          </span>
-
+          <span>{post.readingTime}</span>
         </div>
 
-        <Link
-          href={`/blog/${post.slug}`}
-          className={styles.title}
-        >
+        <Link href={`/blog/${post.slug}`} className={styles.title}>
           {post.title}
         </Link>
 
-        <p className={styles.excerpt}>
-          {post.excerpt}
-        </p>
+        <p className={styles.excerpt}>{post.excerpt}</p>
 
         <div className={styles.footer}>
+          <span>{post.publishedAt}</span>
 
-          <span>
-            {post.publishedAt}
-          </span>
-
-          <Link
-            href={`/blog/${post.slug}`}
-            className={styles.readMore}
-          >
+          <Link href={`/blog/${post.slug}`} className={styles.readMore}>
             Read Article
-
-            <ArrowUpRight
-              size={16}
-            />
+            <ArrowUpRight size={16} />
           </Link>
-
         </div>
-
       </div>
-
     </article>
   );
 }

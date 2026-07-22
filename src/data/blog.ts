@@ -1,13 +1,10 @@
 import type { BlogPost } from "@/types/blog";
 
-
 export const blogPosts: BlogPost[] = [
   {
-    slug:
-      "how-to-build-modern-websites",
+    slug: "how-to-build-modern-websites",
 
-    title:
-      "How I Approach Building Modern Websites",
+    title: "How I Approach Building Modern Websites",
 
     excerpt:
       "A practical look at my process for turning an idea into a fast, responsive, and scalable web experience.",
@@ -15,35 +12,23 @@ export const blogPosts: BlogPost[] = [
     content:
       "Building a modern website requires more than writing code. It requires understanding the problem, defining the user experience, choosing the right technology, and creating a maintainable architecture.",
 
-    category:
-      "Web Development",
+    category: "Web Development",
 
-    author:
-      "Godwin",
+    author: "Godwin",
 
-    publishedAt:
-      "2026-07-01",
+    publishedAt: "2026-07-01",
 
-    readingTime:
-      "5 min read",
+    readingTime: "5 min read",
 
-    image:
-      "/images/blog/modern-websites.jpg",
+    image: "/blog/modern.png",
 
-    featured:
-      true,
+    featured: true,
 
-    tags: [
-      "Web Development",
-      "Next.js",
-      "React",
-      "Frontend",
-    ],
+    tags: ["Web Development", "Next.js", "React", "Frontend"],
 
     sections: [
       {
-        heading:
-          "Start With the Problem",
+        heading: "Start With the Problem",
 
         paragraphs: [
           "Before writing any code, I first try to understand the problem the website is supposed to solve. A website should have a clear purpose and a clear audience.",
@@ -53,8 +38,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Choose the Right Technology",
+        heading: "Choose the Right Technology",
 
         paragraphs: [
           "The technology should support the goals of the project rather than simply being chosen because it is popular.",
@@ -64,8 +48,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Focus on User Experience",
+        heading: "Focus on User Experience",
 
         paragraphs: [
           "A technically impressive website can still fail if it is difficult to use.",
@@ -75,8 +58,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Build for the Future",
+        heading: "Build for the Future",
 
         paragraphs: [
           "A good website should not only work today. It should also be structured in a way that makes future improvements easier.",
@@ -86,8 +68,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Final Thoughts",
+        heading: "Final Thoughts",
 
         paragraphs: [
           "My approach to web development is centered around solving real problems with thoughtful technology.",
@@ -99,11 +80,9 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:
-      "why-performance-matters",
+    slug: "why-performance-matters",
 
-    title:
-      "Why Website Performance Matters",
+    title: "Why Website Performance Matters",
 
     excerpt:
       "Performance isn't just a technical metric. It directly affects user experience, engagement, and business results.",
@@ -111,31 +90,21 @@ export const blogPosts: BlogPost[] = [
     content:
       "A slow website creates friction. Users expect websites to load quickly and respond immediately to their actions.",
 
-    category:
-      "Performance",
+    category: "Performance",
 
-    author:
-      "Godwin",
+    author: "Godwin",
 
-    publishedAt:
-      "2026-06-20",
+    publishedAt: "2026-06-20",
 
-    readingTime:
-      "4 min read",
+    readingTime: "4 min read",
 
-    image:
-      "/images/blog/performance.jpg",
+    image: "/blog/performance.jpg",
 
-    tags: [
-      "Performance",
-      "SEO",
-      "Core Web Vitals",
-    ],
+    tags: ["Performance", "SEO", "Core Web Vitals"],
 
     sections: [
       {
-        heading:
-          "Performance Is Part of User Experience",
+        heading: "Performance Is Part of User Experience",
 
         paragraphs: [
           "Website performance directly affects how users perceive a product.",
@@ -145,8 +114,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Performance and SEO",
+        heading: "Performance and SEO",
 
         paragraphs: [
           "Search engines consider a variety of signals when evaluating web pages. Technical performance is therefore an important part of a broader SEO strategy.",
@@ -156,8 +124,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Building Performance Into the Process",
+        heading: "Building Performance Into the Process",
 
         paragraphs: [
           "Performance should not be treated as something to fix at the end of a project.",
@@ -169,11 +136,9 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:
-      "learning-full-stack-development",
+    slug: "learning-full-stack-development",
 
-    title:
-      "My Journey Into Full-Stack Development",
+    title: "My Journey Into Full-Stack Development",
 
     excerpt:
       "Why I decided to move beyond frontend development and learn how the entire application works.",
@@ -181,32 +146,21 @@ export const blogPosts: BlogPost[] = [
     content:
       "Learning full-stack development changed the way I think about building products.",
 
-    category:
-      "Career",
+    category: "Career",
 
-    author:
-      "Godwin",
+    author: "Godwin",
 
-    publishedAt:
-      "2026-06-10",
+    publishedAt: "2026-06-10",
 
-    readingTime:
-      "6 min read",
+    readingTime: "6 min read",
 
-    image:
-      "/images/blog/full-stack.jpg",
+    image: "/blog/full-stack.jpg",
 
-    tags: [
-      "Career",
-      "JavaScript",
-      "Node.js",
-      "MongoDB",
-    ],
+    tags: ["Career", "JavaScript", "Node.js", "MongoDB"],
 
     sections: [
       {
-        heading:
-          "Starting With Frontend Development",
+        heading: "Starting With Frontend Development",
 
         paragraphs: [
           "My journey started with frontend development and learning how to create interfaces that users could interact with.",
@@ -216,8 +170,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "Why I Learned Backend Development",
+        heading: "Why I Learned Backend Development",
 
         paragraphs: [
           "As I worked on more complex projects, I wanted to understand what happens behind the interface.",
@@ -227,9 +180,7 @@ export const blogPosts: BlogPost[] = [
       },
 
       {
-        heading:
-          "The Advantage of Full-Stack Thinking",
-
+        heading: "The Advantage of Full-Stack Thinking",
         paragraphs: [
           "Understanding both frontend and backend development makes it easier to make better technical decisions.",
 

@@ -6,9 +6,7 @@ import styles from "./ProjectFilter.module.css";
 
 type ProjectFilterProps = {
   activeCategory: ProjectCategory;
-  onCategoryChange: (
-    category: ProjectCategory
-  ) => void;
+  onCategoryChange: (category: ProjectCategory) => void;
 };
 
 const categories: ProjectCategory[] = [
@@ -24,26 +22,16 @@ export default function ProjectFilter({
 }: ProjectFilterProps) {
   return (
     <div className={styles.filter}>
-
       {categories.map((category) => (
-
         <button
           key={category}
           type="button"
-          className={
-            activeCategory === category
-              ? styles.active
-              : ""
-          }
-          onClick={() =>
-            onCategoryChange(category)
-          }
+          className={activeCategory === category ? styles.active : ""}
+          onClick={() => onCategoryChange(category)}
         >
           {category}
         </button>
-
       ))}
-
     </div>
   );
 }

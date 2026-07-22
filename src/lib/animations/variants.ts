@@ -1,6 +1,4 @@
-import {
-  Variants,
-} from "framer-motion";
+import { Variants } from "framer-motion";
 
 export const fadeUp: Variants = {
   hidden: {
@@ -14,12 +12,7 @@ export const fadeUp: Variants = {
 
     transition: {
       duration: 0.7,
-      ease: [
-        0.22,
-        1,
-        0.36,
-        1,
-      ],
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -51,12 +44,7 @@ export const scaleIn: Variants = {
 
     transition: {
       duration: 0.7,
-      ease: [
-        0.22,
-        1,
-        0.36,
-        1,
-      ],
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -83,12 +71,7 @@ export const slideFromLeft: Variants = {
 
     transition: {
       duration: 0.7,
-      ease: [
-        0.22,
-        1,
-        0.36,
-        1,
-      ],
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -105,12 +88,7 @@ export const slideFromRight: Variants = {
 
     transition: {
       duration: 0.7,
-      ease: [
-        0.22,
-        1,
-        0.36,
-        1,
-      ],
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };

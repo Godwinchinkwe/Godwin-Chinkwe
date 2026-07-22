@@ -1,17 +1,12 @@
 export default function WebsiteSchema() {
-
   const schema = {
-    "@context":
-      "https://schema.org",
+    "@context": "https://schema.org",
 
-    "@type":
-      "WebSite",
+    "@type": "WebSite",
 
-    name:
-      "Godwin Chinkwe",
+    name: "Godwin Chinkwe",
 
-    url:
-      "https://yourdomain.com",
+    url: "https://yourdomain.com",
 
     description:
       "Personal portfolio website of Godwin Chinkwe, a full-stack developer.",
@@ -21,10 +16,7 @@ export default function WebsiteSchema() {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html:
-          JSON.stringify(
-            schema
-          ),
+        __html: JSON.stringify(schema),
       }}
     />
   );

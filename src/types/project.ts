@@ -1,8 +1,4 @@
-export type ProjectCategory =
-  | "All"
-  | "Frontend"
-  | "Full-Stack"
-  | "Backend";
+export type ProjectCategory = "All" | "Frontend" | "Full-Stack" | "Backend";
 
 export type Project = {
   slug: string;
@@ -10,10 +6,7 @@ export type Project = {
   shortDescription: string;
   description: string;
 
-  category: Exclude<
-    ProjectCategory,
-    "All"
-  >;
+  category: Exclude<ProjectCategory, "All">;
 
   technologies: string[];
 

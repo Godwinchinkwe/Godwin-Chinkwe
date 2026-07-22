@@ -1,6 +1,4 @@
-import {
-  MetadataRoute,
-} from "next";
+import { MetadataRoute } from "next";
 
 // export default function sitemap():
 //   MetadataRoute.Sitemap {
@@ -8,124 +6,86 @@ import {
 //   const baseUrl =
 //     "https://yourdomain.com";
 
-import {
-  blogPosts,
-} from "@/data/blog";
+import { blogPosts } from "@/data/blog";
 
-export default function sitemap():
-  MetadataRoute.Sitemap {
-
-  const baseUrl =
-    "https://yourdomain.com";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://yourdomain.com";
 
   const staticPages = [
     {
-      url:
-        baseUrl,
+      url: baseUrl,
 
-      priority:
-        1,
+      priority: 1,
     },
 
     {
-      url:
-        `${baseUrl}/blog`,
+      url: `${baseUrl}/blog`,
 
-      priority:
-        0.8,
+      priority: 0.8,
     },
   ];
 
-  const blogPages =
-    blogPosts.map(
-      (post) => ({
-        url:
-          `${baseUrl}/blog/${post.slug}`,
+  const blogPages = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
 
-        lastModified:
-          post.publishedAt,
+    lastModified: post.publishedAt,
 
-        changeFrequency:
-          "monthly" as const,
+    changeFrequency: "monthly" as const,
 
-        priority:
-          0.7,
-      })
-    );
+    priority: 0.7,
+  }));
 
   return [
-
     {
-      url:
-        baseUrl,
+      url: baseUrl,
 
-      lastModified:
-        new Date(),
+      lastModified: new Date(),
 
-      changeFrequency:
-        "monthly",
+      changeFrequency: "monthly",
 
-      priority:
-        1,
+      priority: 1,
     },
 
     {
-      url:
-        `${baseUrl}/#about`,
+      url: `${baseUrl}/#about`,
 
-      lastModified:
-        new Date(),
+      lastModified: new Date(),
 
-      changeFrequency:
-        "monthly",
+      changeFrequency: "monthly",
 
-      priority:
-        0.8,
+      priority: 0.8,
     },
 
     {
-      url:
-        `${baseUrl}/#projects`,
+      url: `${baseUrl}/#projects`,
 
-      lastModified:
-        new Date(),
+      lastModified: new Date(),
 
-      changeFrequency:
-        "monthly",
+      changeFrequency: "monthly",
 
-      priority:
-        0.9,
+      priority: 0.9,
     },
 
     {
-      url:
-        `${baseUrl}/blog`,
+      url: `${baseUrl}/blog`,
 
-      lastModified:
-        new Date(),
+      lastModified: new Date(),
 
-      changeFrequency:
-        "weekly",
+      changeFrequency: "weekly",
 
-      priority:
-        0.8,
+      priority: 0.8,
     },
 
     {
-      url:
-        `${baseUrl}/#contact`,
+      url: `${baseUrl}/#contact`,
 
-      lastModified:
-        new Date(),
+      lastModified: new Date(),
 
-      changeFrequency:
-        "monthly",
+      changeFrequency: "monthly",
 
-      priority:
-        0.7,
+      priority: 0.7,
     },
     ...staticPages,
     ...blogPages,
-
   ];
 }

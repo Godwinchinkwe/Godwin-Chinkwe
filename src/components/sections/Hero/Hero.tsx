@@ -5,12 +5,12 @@ import {
   ArrowDown,
   ArrowRight,
   // Download,
-//   Github,
-//   LinkedinIcon,
+  //   Github,
+  //   LinkedinIcon,
   Mail,
 } from "lucide-react";
 
-import {FaGithub,FaLinkedin,} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import styles from "./Hero.module.css";
 import ResumeButton from "@/components/ui/ResumeButton/ResumeButton";
@@ -21,10 +21,7 @@ import ResumeButton from "@/components/ui/ResumeButton/ResumeButton";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className={styles.hero}
-    >
+    <section id="home" className={styles.hero}>
       {/* Background Effects */}
       <div className={styles.background}>
         <div className={styles.gradientOne} />
@@ -33,42 +30,30 @@ export default function Hero() {
       </div>
 
       <div className={styles.container}>
-
         {/* Availability Badge */}
         <div className={styles.availability}>
           <span className={styles.statusDot} />
 
-          <span>
-            Available for new opportunities
-          </span>
+          <span>Available for new opportunities</span>
         </div>
 
         {/* Main Heading */}
         <h1 className={styles.heading}>
           Building Digital Experiences
-          <span className={styles.headingAccent}>
-            That Make an Impact.
-          </span>
+          <span className={styles.headingAccent}>That Make an Impact.</span>
         </h1>
-        
 
         {/* Description */}
         <p className={styles.description}>
-          I&apos;m a Frontend Engineer and Full-Stack
-          Developer focused on building modern,
-          scalable, and high-performance web
-          applications that help businesses grow.
+          I&apos;m a Frontend Engineer and Full-Stack Developer focused on
+          building modern, scalable, and high-performance web applications that
+          help businesses grow.
         </p>
 
         {/* CTA Buttons */}
         <div className={styles.actions}>
-
-          <Link
-            href="#projects"
-            className={styles.primaryButton}
-          >
+          <Link href="#projects" className={styles.primaryButton}>
             View My Work
-
             <ArrowRight size={18} />
           </Link>
 
@@ -80,16 +65,11 @@ export default function Hero() {
             Download Resume
             <Download size={17} />
           </a> */}
-           <ResumeButton
-    variant="secondary"
-  />
-
-
+          <ResumeButton variant="secondary" />
         </div>
 
         {/* Social Links */}
         <div className={styles.socials}>
-
           <a
             href="https://github.com/"
             target="_blank"
@@ -108,27 +88,17 @@ export default function Hero() {
             <FaLinkedin size={20} />
           </a>
 
-          <a
-            href="mailto:your@email.com"
-            aria-label="Email"
-          >
+          <a href="mailto:your@email.com" aria-label="Email">
             <Mail size={20} />
           </a>
-
         </div>
 
         {/* Scroll Indicator */}
-        <Link
-          href="#about"
-          className={styles.scrollIndicator}
-        >
-          <span>
-            Scroll to explore
-          </span>
+        <Link href="#about" className={styles.scrollIndicator}>
+          <span>Scroll to explore</span>
 
           <ArrowDown size={16} />
         </Link>
-
       </div>
     </section>
   );

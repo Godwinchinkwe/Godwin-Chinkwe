@@ -154,8 +154,7 @@
 .cta:hover {
   transform: translateY(-2px);
 
-  box-shadow:
-    0 10px 30px rgba(128, 90, 163, 0.3);
+  box-shadow: 0 10px 30px rgba(128, 90, 163, 0.3);
 }
 
 .mobileMenuButton {
@@ -176,7 +175,6 @@
 /* Mobile */
 
 @media (max-width: 900px) {
-
   .desktopNav,
   .actions {
     display: none;
@@ -226,8 +224,7 @@
 
     text-decoration: none;
 
-    border-bottom:
-      1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .mobileNavLink:hover {
@@ -251,12 +248,8 @@
 }
 
 @media (max-width: 600px) {
-
   .container {
-    width: min(
-      100% - 32px,
-      1200px
-    );
+    width: min(100% - 32px, 1200px);
 
     height: 70px;
   }

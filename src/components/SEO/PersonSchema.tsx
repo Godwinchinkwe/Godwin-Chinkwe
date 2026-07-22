@@ -1,20 +1,14 @@
 export default function PersonSchema() {
-
   const schema = {
-    "@context":
-      "https://schema.org",
+    "@context": "https://schema.org",
 
-    "@type":
-      "Person",
+    "@type": "Person",
 
-    name:
-      "Godwin Chinkwe",
+    name: "Godwin Chinkwe",
 
-    url:
-      "https://yourdomain.com",
+    url: "https://yourdomain.com",
 
-    jobTitle:
-      "Full-Stack Developer",
+    jobTitle: "Full-Stack Developer",
 
     description:
       "Full-stack developer specializing in modern web applications and scalable backend systems.",
@@ -29,10 +23,7 @@ export default function PersonSchema() {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html:
-          JSON.stringify(
-            schema
-          ),
+        __html: JSON.stringify(schema),
       }}
     />
   );

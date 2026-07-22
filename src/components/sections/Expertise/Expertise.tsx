@@ -1,10 +1,4 @@
-import {
-  Code2,
-  Database,
-  Gauge,
-  Layers3,
-  ArrowUpRight,
-} from "lucide-react";
+import { Code2, Database, Gauge, Layers3, ArrowUpRight } from "lucide-react";
 
 import styles from "./Expertise.module.css";
 
@@ -30,13 +24,7 @@ const expertise = [
     title: "Backend Development",
     description:
       "Developing scalable backend systems, APIs, and database architectures that power reliable digital products.",
-    technologies: [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "REST APIs",
-      "SQL",
-    ],
+    technologies: ["Node.js", "Express", "MongoDB", "REST APIs", "SQL"],
   },
   {
     number: "03",
@@ -70,19 +58,12 @@ const expertise = [
 
 export default function Expertise() {
   return (
-    <section
-      id="expertise"
-      className={styles.expertise}
-    >
+    <section id="expertise" className={styles.expertise}>
       <div className={styles.container}>
-
         {/* Header */}
         <div className={styles.header}>
-
           <div>
-            <span className={styles.eyebrow}>
-              Expertise
-            </span>
+            <span className={styles.eyebrow}>Expertise</span>
 
             <h2 className={styles.title}>
               Turning ideas into
@@ -91,83 +72,52 @@ export default function Expertise() {
           </div>
 
           <p className={styles.intro}>
-            I combine engineering, design, and
-            business thinking to build digital
-            experiences that are functional,
-            scalable, and built to last.
+            I combine engineering, design, and business thinking to build
+            digital experiences that are functional, scalable, and built to
+            last.
           </p>
-
         </div>
 
         {/* Expertise Grid */}
         <div className={styles.grid}>
-
           {expertise.map((item) => {
-
             const Icon = item.icon;
 
             return (
-              <article
-                key={item.number}
-                className={styles.card}
-              >
-
+              <article key={item.number} className={styles.card}>
                 {/* Card Header */}
                 <div className={styles.cardTop}>
-
-                  <span className={styles.number}>
-                    {item.number}
-                  </span>
+                  <span className={styles.number}>{item.number}</span>
 
                   <div className={styles.icon}>
                     <Icon size={22} />
                   </div>
-
                 </div>
 
                 {/* Content */}
                 <div className={styles.cardContent}>
+                  <h3>{item.title}</h3>
 
-                  <h3>
-                    {item.title}
-                  </h3>
-
-                  <p>
-                    {item.description}
-                  </p>
-
+                  <p>{item.description}</p>
                 </div>
 
                 {/* Technologies */}
                 <div className={styles.technologies}>
-
-                  {item.technologies.map(
-                    (technology) => (
-                      <span
-                        key={technology}
-                        className={
-                          styles.technology
-                        }
-                      >
-                        {technology}
-                      </span>
-                    )
-                  )}
-
+                  {item.technologies.map((technology) => (
+                    <span key={technology} className={styles.technology}>
+                      {technology}
+                    </span>
+                  ))}
                 </div>
 
                 {/* Arrow */}
                 <div className={styles.arrow}>
                   <ArrowUpRight size={20} />
                 </div>
-
               </article>
             );
-
           })}
-
         </div>
-
       </div>
     </section>
   );

@@ -27,15 +27,11 @@ const spaceGrotesk = Space_Grotesk({
 // } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://yourdomain.com"
-  ),
+  metadataBase: new URL("https://yourdomain.com"),
 
   title: {
-    default:
-      "Godwin Chinkwe | Full-Stack Developer",
-    template:
-      "%s | Godwin Chinkwe",
+    default: "Godwin Chinkwe | Full-Stack Developer",
+    template: "%s | Godwin Chinkwe",
   },
 
   description:
@@ -56,87 +52,65 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name:
-        "Godwin Chinkwe",
+      name: "Godwin Chinkwe",
     },
   ],
 
-  creator:
-    "Godwin Chinkwe",
+  creator: "Godwin Chinkwe",
 
   openGraph: {
-    type:
-      "website",
+    type: "website",
 
-    locale:
-      "en_US",
+    locale: "en_US",
 
-    url:
-      "https://yourdomain.com",
+    url: "https://yourdomain.com",
 
-    title:
-      "Godwin Chinkwe | Full-Stack Developer",
+    title: "Godwin Chinkwe | Full-Stack Developer",
 
     description:
       "Full-stack developer building modern, scalable, and high-performance digital experiences.",
 
-    siteName:
-      "Godwin Chinkwe",
+    siteName: "Godwin Chinkwe",
 
     images: [
       {
-        url:
-          "/images/og-image.jpg",
+        url: "/images/og-image.jpg",
 
-        width:
-          1200,
+        width: 1200,
 
-        height:
-          630,
+        height: 630,
 
-        alt:
-          "Godwin Chinkwe - Full-Stack Developer",
+        alt: "Godwin Chinkwe - Full-Stack Developer",
       },
     ],
   },
 
   twitter: {
-    card:
-      "summary_large_image",
+    card: "summary_large_image",
 
-    title:
-      "Godwin Chinkwe | Full-Stack Developer",
+    title: "Godwin Chinkwe | Full-Stack Developer",
 
     description:
       "Full-stack developer building modern, scalable, and high-performance digital experiences.",
 
-    images: [
-      "/images/og-image.jpg",
-    ],
+    images: ["/images/og-image.jpg"],
   },
 
   robots: {
-    index:
-      true,
+    index: true,
 
-    follow:
-      true,
+    follow: true,
 
     googleBot: {
-      index:
-        true,
+      index: true,
 
-      follow:
-        true,
+      follow: true,
 
-      "max-image-preview":
-        "large",
+      "max-image-preview": "large",
 
-      "max-snippet":
-        -1,
+      "max-snippet": -1,
 
-      "max-video-preview":
-        -1,
+      "max-video-preview": -1,
     },
   },
 };
@@ -154,13 +128,12 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-           <PersonSchema />
-           <WebsiteSchema />
+          <PersonSchema />
+          <WebsiteSchema />
           <Navbar />
           <AnimatedCursor />
           {children}
-        
-        <Footer />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

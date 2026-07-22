@@ -1,45 +1,32 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./AnimatedCursor.module.css";
 
 export default function AnimatedCursor() {
-  const cursorDotRef =
-    useRef<HTMLDivElement>(null);
+  const cursorDotRef = useRef<HTMLDivElement>(null);
 
-  const cursorRingRef =
-    useRef<HTMLDivElement>(null);
+  const cursorRingRef = useRef<HTMLDivElement>(null);
 
-  const [isHovering, setIsHovering] =
-    useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
-  const [isVisible, setIsVisible] =
-    useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-
     /*
      * Disable cursor on touch devices
      */
 
-    const isTouchDevice =
-      window.matchMedia(
-        "(hover: none), (pointer: coarse)"
-      ).matches;
+    const isTouchDevice = window.matchMedia(
+      "(hover: none), (pointer: coarse)",
+    ).matches;
 
     if (isTouchDevice) {
       return;
     }
 
-    const mediaQuery =
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      );
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (mediaQuery.matches) {
       return;
@@ -53,126 +40,67 @@ export default function AnimatedCursor() {
 
     let animationFrame: number;
 
-    const moveCursor = (
-      event: MouseEvent
-    ) => {
+    const moveCursor = (event: MouseEvent) => {
+      mouseX = event.clientX;
 
-      mouseX =
-        event.clientX;
-
-      mouseY =
-        event.clientY;
+      mouseY = event.clientY;
 
       setIsVisible(true);
 
-      if (
-        cursorDotRef.current
-      ) {
-        cursorDotRef.current.style.transform =
-          `translate3d(
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.transform = `translate3d(
             ${mouseX}px,
             ${mouseY}px,
             0
           )`;
       }
-
     };
 
     const animateRing = () => {
+      ringX += (mouseX - ringX) * 0.15;
 
-      ringX +=
-        (mouseX - ringX) *
-        0.15;
+      ringY += (mouseY - ringY) * 0.15;
 
-      ringY +=
-        (mouseY - ringY) *
-        0.15;
-
-      if (
-        cursorRingRef.current
-      ) {
-        cursorRingRef.current.style.transform =
-          `translate3d(
+      if (cursorRingRef.current) {
+        cursorRingRef.current.style.transform = `translate3d(
             ${ringX}px,
             ${ringY}px,
             0
           )`;
       }
 
-      animationFrame =
-        requestAnimationFrame(
-          animateRing
-        );
-
+      animationFrame = requestAnimationFrame(animateRing);
     };
 
-    const handleMouseOver = (
-      event: MouseEvent
-    ) => {
+    const handleMouseOver = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
 
-      const target =
-        event.target as HTMLElement;
+      const interactiveElement = target.closest("a, button, [data-cursor]");
 
-      const interactiveElement =
-        target.closest(
-          "a, button, [data-cursor]"
-        );
-
-      setIsHovering(
-        Boolean(
-          interactiveElement
-        )
-      );
-
+      setIsHovering(Boolean(interactiveElement));
     };
 
     const handleMouseLeave = () => {
       setIsVisible(false);
     };
 
-    window.addEventListener(
-      "mousemove",
-      moveCursor
-    );
+    window.addEventListener("mousemove", moveCursor);
 
-    document.addEventListener(
-      "mouseover",
-      handleMouseOver
-    );
+    document.addEventListener("mouseover", handleMouseOver);
 
-    document.addEventListener(
-      "mouseleave",
-      handleMouseLeave
-    );
+    document.addEventListener("mouseleave", handleMouseLeave);
 
-    animationFrame =
-      requestAnimationFrame(
-        animateRing
-      );
+    animationFrame = requestAnimationFrame(animateRing);
 
     return () => {
+      window.removeEventListener("mousemove", moveCursor);
 
-      window.removeEventListener(
-        "mousemove",
-        moveCursor
-      );
+      document.removeEventListener("mouseover", handleMouseOver);
 
-      document.removeEventListener(
-        "mouseover",
-        handleMouseOver
-      );
+      document.removeEventListener("mouseleave", handleMouseLeave);
 
-      document.removeEventListener(
-        "mouseleave",
-        handleMouseLeave
-      );
-
-      cancelAnimationFrame(
-        animationFrame
-      );
-
+      cancelAnimationFrame(animationFrame);
     };
-
   }, []);
 
   return (
@@ -181,11 +109,7 @@ export default function AnimatedCursor() {
         ref={cursorDotRef}
         className={`
           ${styles.cursorDot}
-          ${
-            isVisible
-              ? styles.visible
-              : ""
-          }
+          ${isVisible ? styles.visible : ""}
         `}
       />
 
@@ -193,16 +117,8 @@ export default function AnimatedCursor() {
         ref={cursorRingRef}
         className={`
           ${styles.cursorRing}
-          ${
-            isVisible
-              ? styles.visible
-              : ""
-          }
-          ${
-            isHovering
-              ? styles.hovering
-              : ""
-          }
+          ${isVisible ? styles.visible : ""}
+          ${isHovering ? styles.hovering : ""}
         `}
       />
     </>

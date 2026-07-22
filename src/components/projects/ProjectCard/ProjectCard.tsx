@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import {ArrowUpRight,} from "lucide-react";
-import {FaGithub,} from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import type { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
 
@@ -9,17 +9,11 @@ type ProjectCardProps = {
   project: Project;
 };
 
-export default function ProjectCard({
-  project,
-}: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={styles.card} data-cursor="project">
-
       {/* Image */}
-      <Link
-        href={`/projects/${project.slug}`}
-        className={styles.imageWrapper}
-      >
+      <Link href={`/projects/${project.slug}`} className={styles.imageWrapper}>
         <Image
           src={project.image}
           alt={project.title}
@@ -29,9 +23,7 @@ export default function ProjectCard({
         />
 
         <div className={styles.overlay}>
-          <span>
-            View Case Study
-          </span>
+          <span>View Case Study</span>
 
           <ArrowUpRight size={20} />
         </div>
@@ -39,15 +31,10 @@ export default function ProjectCard({
 
       {/* Content */}
       <div className={styles.content}>
-
         <div className={styles.top}>
-
-          <span className={styles.category}>
-            {project.category}
-          </span>
+          <span className={styles.category}>{project.category}</span>
 
           <div className={styles.links}>
-
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
@@ -69,40 +56,24 @@ export default function ProjectCard({
                 <ArrowUpRight size={18} />
               </a>
             )}
-
           </div>
-
         </div>
 
-        <Link
-          href={`/projects/${project.slug}`}
-          className={styles.title}
-        >
+        <Link href={`/projects/${project.slug}`} className={styles.title}>
           {project.title}
         </Link>
 
-        <p className={styles.description}>
-          {project.shortDescription}
-        </p>
+        <p className={styles.description}>{project.shortDescription}</p>
 
         {/* Technologies */}
         <div className={styles.technologies}>
-
-          {project.technologies.map(
-            (technology) => (
-              <span
-                key={technology}
-                className={styles.technology}
-              >
-                {technology}
-              </span>
-            )
-          )}
-
+          {project.technologies.map((technology) => (
+            <span key={technology} className={styles.technology}>
+              {technology}
+            </span>
+          ))}
         </div>
-
       </div>
-
     </article>
   );
 }

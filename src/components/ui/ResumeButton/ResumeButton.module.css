@@ -7,77 +7,48 @@
 
   gap: 10px;
 
-  padding:
-    14px
-    22px;
+  padding: 14px 22px;
 
-  border-radius:
-    6px;
+  border-radius: 6px;
 
-  font-size:
-    14px;
+  font-size: 14px;
 
-  font-weight:
-    600;
+  font-weight: 600;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  cursor:
-    pointer;
+  cursor: pointer;
 
   transition:
-    transform
-    0.25s ease,
-
-    background
-    0.25s ease,
-
-    border-color
-    0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .button:hover {
-  transform:
-    translateY(
-      -2px
-    );
+  transform: translateY(-2px);
 }
 
 .primary {
-  background:
-    #805aa3;
+  background: #805aa3;
 
-  color:
-    white;
+  color: white;
 }
 
 .primary:hover {
-  background:
-    #6d4b8b;
+  background: #6d4b8b;
 }
 
 .secondary {
-  border:
-    1px solid
-    rgba(
-      255,
-      255,
-      255,
-      0.15
-    );
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
-  background:
-    transparent;
+  background: transparent;
 
-  color:
-    white;
+  color: white;
 }
 
 .secondary:hover {
-  border-color:
-    #a98024;
+  border-color: #a98024;
 
-  color:
-    #a98024;
+  color: #a98024;
 }
