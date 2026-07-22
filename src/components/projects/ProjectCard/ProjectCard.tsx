@@ -1,15 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-} from "lucide-react";
-
-import {
-  FaGithub,
-} from "react-icons/fa";
-
+import {ArrowUpRight,} from "lucide-react";
+import {FaGithub,} from "react-icons/fa";
 import type { Project } from "@/types/project";
-
 import styles from "./ProjectCard.module.css";
 
 type ProjectCardProps = {
@@ -20,7 +13,7 @@ export default function ProjectCard({
   project,
 }: ProjectCardProps) {
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-cursor="project">
 
       {/* Image */}
       <Link

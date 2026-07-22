@@ -3,7 +3,170 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+:root {
+  --background:
+    #050505;
 
+  --background-secondary:
+    #080808;
+
+  --surface:
+    rgba(
+      255,
+      255,
+      255,
+      0.03
+    );
+
+  --surface-hover:
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+
+  --text-primary:
+    #ffffff;
+
+  --text-secondary:
+    #9ca3af;
+
+  --text-muted:
+    #6b7280;
+
+  --border:
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  --border-hover:
+    rgba(
+      128,
+      90,
+      163,
+      0.4
+    );
+
+  --primary:
+    #805aa3;
+
+  --primary-hover:
+    #6d4b8b;
+
+  --accent:
+    #a98024;
+
+  --accent-hover:
+    #c19a3b;
+}
+
+.light {
+  --background:
+    #f8f8f8;
+
+  --background-secondary:
+    #ffffff;
+
+  --surface:
+    rgba(
+      0,
+      0,
+      0,
+      0.03
+    );
+
+  --surface-hover:
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+  --text-primary:
+    #111111;
+
+  --text-secondary:
+    #555555;
+
+  --text-muted:
+    #777777;
+
+  --border:
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+
+  --border-hover:
+    rgba(
+      128,
+      90,
+      163,
+      0.4
+    );
+
+  --primary:
+    #805aa3;
+
+  --primary-hover:
+    #6d4b8b;
+
+  --accent:
+    #8d6b14;
+
+  --accent-hover:
+    #a98024;
+}
+
+html {
+  scroll-behavior:
+    smooth;
+}
+
+body {
+  margin:
+    0;
+
+  padding:
+    0;
+
+  background:
+    var(--background);
+
+  color:
+    var(--text-primary);
+
+  transition:
+    background-color
+    0.3s ease,
+
+    color
+    0.3s ease;
+}
+* {
+  box-sizing:
+    border-box;
+}
+
+a {
+  color:
+    inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font:
+    inherit;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -150,3 +313,4 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+

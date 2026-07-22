@@ -25,7 +25,7 @@ export const projects: Project[] = [
     ],
 
     image:
-      "/images/projects/airport-golden-tulip.jpg",
+      "/images/projects/airport-golden-tulip.png",
 
     liveUrl:
       "https://airportgoldentuliphotel.com",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     ],
 
     image:
-      "/images/projects/geeluxe-store.jpg",
+      "/images/projects/geeluxe-store.jpeg",
 
     liveUrl:
       "https://geeluxe.store",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
     ],
 
     image:
-      "/images/projects/business-platform.jpg",
+      "/images/projects/business-platform.jpeg",
 
     liveUrl:
       "",

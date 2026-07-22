@@ -1,0 +1,491 @@
+.contact {
+  position: relative;
+
+  padding:
+    160px
+    0;
+
+  overflow: hidden;
+
+  background: var(--background);
+
+  color: var(--text-primary);
+}
+
+.contact::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20%;
+
+  left: 50%;
+
+  width: 600px;
+
+  height: 600px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background: var(--background);
+
+  filter:
+    blur(120px);
+
+  pointer-events:
+    none;
+}
+
+.container {
+  position:
+    relative;
+
+  width:
+    min(
+      calc(100% - 48px),
+      1200px
+    );
+
+  margin:
+    0 auto;
+}
+
+.header {
+  max-width:
+    700px;
+
+  margin-bottom:
+    70px;
+}
+
+.eyebrow {
+  display:
+    block;
+
+  margin-bottom:
+    24px;
+
+  color:
+    #a98024;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.15em;
+}
+
+.header h2 {
+  margin:
+    0;
+
+  font-family:
+    var(--font-space),
+    sans-serif;
+
+  font-size:
+    clamp(
+      3rem,
+      7vw,
+      6rem
+    );
+
+  line-height:
+    0.95;
+
+  letter-spacing:
+    -0.05em;
+}
+
+.header h2 span {
+  display:
+    block;
+
+  color: var(--text-muted);
+}
+
+.header p {
+  max-width:
+    550px;
+
+  margin-top:
+    30px;
+
+  color: var(--text-secondary);
+
+  font-size:
+    17px;
+
+  line-height:
+    1.8;
+}
+
+.formWrapper {
+  max-width:
+    900px;
+
+  padding:
+    50px;
+
+  background: var(--surface);
+
+  border-radius:
+    16px;
+
+ background: var(--surface);
+
+  backdrop-filter:
+    blur(20px);
+}
+
+.row {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      1fr
+    );
+
+  gap:
+    24px;
+}
+
+.field {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    28px;
+}
+
+.field label {
+  color:
+    #d1d5db;
+
+  font-size:
+    13px;
+
+  font-weight:
+    500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width:
+    100%;
+
+  padding:
+    16px
+    18px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+
+  border-radius:
+    8px;
+
+  outline:
+    none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.03
+    );
+
+  color: var(--text-primary);
+
+  font-family:
+    inherit;
+
+  font-size:
+    14px;
+
+  transition:
+    border-color
+    0.25s ease,
+
+    background
+    0.25s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color:
+    #6b7280;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color:
+    #805aa3;
+
+  background: var(--background);
+}
+
+.field select {
+  cursor:
+    pointer;
+}
+
+.field select option {
+  background:
+    #111111;
+
+  color:
+    white;
+}
+
+.field textarea {
+  resize:
+    vertical;
+
+  min-height:
+    180px;
+}
+
+.submit {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    15px
+    24px;
+
+  border:
+    none;
+
+  border-radius:
+    6px;
+
+  background:
+    #805aa3;
+
+  color:
+    white;
+
+  font-family:
+    inherit;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform
+    0.25s ease,
+
+    background
+    0.25s ease;
+}
+
+.submit:hover {
+  transform:
+    translateY(
+      -2px
+    );
+
+  background:
+    #6d4b8b;
+}
+
+.submit:disabled {
+  opacity:
+    0.6;
+
+  cursor:
+    not-allowed;
+
+  transform:
+    none;
+}
+
+.spinner {
+  animation:
+    spin
+    1s
+    linear
+    infinite;
+}
+
+@keyframes spin {
+  from {
+    transform:
+      rotate(
+        0deg
+      );
+  }
+
+  to {
+    transform:
+      rotate(
+        360deg
+      );
+  }
+}
+
+.error {
+  margin-bottom:
+    20px;
+
+  color:
+    #ef4444;
+
+  font-size:
+    13px;
+}
+
+.success {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    center;
+
+  min-height:
+    400px;
+}
+
+.success svg {
+  margin-bottom:
+    24px;
+
+  color:
+    #a98024;
+}
+
+.success h3 {
+  margin:
+    0;
+
+  font-family:
+    var(--font-space),
+    sans-serif;
+
+  font-size:
+    32px;
+}
+
+.success p {
+  max-width:
+    500px;
+
+  margin:
+    15px
+    0
+    30px;
+
+  color:
+    #9ca3af;
+
+  line-height:
+    1.7;
+}
+
+.success button {
+  padding:
+    12px
+    20px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+
+  border-radius:
+    6px;
+
+  background:
+    transparent;
+
+  color:
+    white;
+
+  cursor:
+    pointer;
+}
+
+@media (
+  max-width:
+    768px
+) {
+
+  .contact {
+    padding:
+      100px
+      0;
+  }
+
+  .container {
+    width:
+      calc(
+        100% - 32px
+      );
+  }
+
+  .formWrapper {
+    padding:
+      28px
+      20px;
+  }
+
+  .row {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      0;
+  }
+
+}

@@ -7,7 +7,16 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import Reveal from "@/components/ui/Reveal/Reveal";
+
+import {
+  fadeUp,
+  slideFromLeft,
+  slideFromRight,
+} from "@/lib/animations/variants";
+
 import styles from "./About.module.css";
+import ResumeButton from "@/components/ui/ResumeButton/ResumeButton";
 
 const strengths = [
   {
@@ -53,10 +62,8 @@ const stats = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className={styles.about}
-    >
+    <section id="about"
+      className={styles.about}>
       <div className={styles.container}>
 
         {/* Section Header */}
@@ -102,6 +109,11 @@ export default function About() {
               reliable, maintainable, and enjoyable
               to use.
             </p>
+            <div className={styles.actions}>
+
+  <ResumeButton />
+
+</div>
 
             <Link
               href="#projects"
@@ -115,6 +127,7 @@ export default function About() {
           </div>
 
           {/* Strengths */}
+          
           <div className={styles.strengths}>
 
             {strengths.map((strength) => {
@@ -126,6 +139,7 @@ export default function About() {
                   key={strength.title}
                   className={styles.strengthCard}
                 >
+                  
 
                   <div className={styles.iconWrapper}>
                     <Icon size={21} />

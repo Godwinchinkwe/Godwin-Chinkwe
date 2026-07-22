@@ -6,6 +6,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import styles from "./Navbar.module.css";
+import ThemeToggle from "@/components/ui/ThemeToggle/ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -72,11 +73,15 @@ export default function Navbar() {
           ))}
         </nav>
 
+
+
+
+
         {/* Desktop Actions */}
         <div className={styles.actions}>
 
           {/* Theme Toggle */}
-          <button
+          {/* <button
             type="button"
             className={styles.iconButton}
             onClick={() =>
@@ -86,7 +91,8 @@ export default function Navbar() {
           >
             <Sun className={styles.sunIcon} />
             <Moon className={styles.moonIcon} />
-          </button>
+          </button> */}
+           <ThemeToggle />
 
           {/* CTA */}
           <Link
@@ -134,6 +140,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <ThemeToggle />
 
           <Link
             href="#contact"

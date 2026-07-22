@@ -4,17 +4,20 @@ import Link from "next/link";
 import {
   ArrowDown,
   ArrowRight,
+  // Download,
 //   Github,
 //   LinkedinIcon,
   Mail,
 } from "lucide-react";
 
-import {
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import {FaGithub,FaLinkedin,} from "react-icons/fa";
 
 import styles from "./Hero.module.css";
+import ResumeButton from "@/components/ui/ResumeButton/ResumeButton";
+
+// import {motion,} from "framer-motion";
+
+// import {fadeUp,staggerContainer,} from "@/lib/animations/variants";
 
 export default function Hero() {
   return (
@@ -47,6 +50,7 @@ export default function Hero() {
             That Make an Impact.
           </span>
         </h1>
+        
 
         {/* Description */}
         <p className={styles.description}>
@@ -68,13 +72,18 @@ export default function Hero() {
             <ArrowRight size={18} />
           </Link>
 
-          <a
+          {/* <a
             href="/resume/Godwin-Chinkwe-Resume.pdf"
             download
             className={styles.secondaryButton}
           >
             Download Resume
-          </a>
+            <Download size={17} />
+          </a> */}
+           <ResumeButton
+    variant="secondary"
+  />
+
 
         </div>
 
