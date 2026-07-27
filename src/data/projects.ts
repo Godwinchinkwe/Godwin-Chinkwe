@@ -3,7 +3,6 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     slug: "airport-golden-tulip-hotel",
-
     title: "Airport Golden Tulip Hotel",
 
     shortDescription:
