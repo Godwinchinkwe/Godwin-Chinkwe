@@ -38,25 +38,6 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      /*
-       * We will connect this
-       * to your backend API.
-       *
-       * Example:
-       *
-       * fetch(
-       *   `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
-       *   {
-       *     method: "POST",
-       *     headers: {
-       *       "Content-Type":
-       *         "application/json",
-       *     },
-       *     body:
-       *       JSON.stringify(formData),
-       *   }
-       * );
-       */
 
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
