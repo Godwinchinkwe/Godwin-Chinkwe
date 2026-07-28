@@ -9,7 +9,7 @@ import { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yourdomain.com";
+  const baseUrl = "https://godwin-chinkwe.vercel.app/";
 
   const staticPages = [
     {

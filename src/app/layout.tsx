@@ -24,7 +24,7 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://godwin-chinkwe.vercel.app/"),
 
   title: {
     default: "Godwin Chinkwe | Full-Stack Developer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 
     locale: "en_US",
 
-    url: "https://yourdomain.com",
+    url: "https://godwin-chinkwe.vercel.app/",
 
     title: "Godwin Chinkwe | Full-Stack Developer",
 
