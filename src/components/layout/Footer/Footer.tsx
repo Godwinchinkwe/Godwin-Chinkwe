@@ -1,18 +1,9 @@
 "use client";
 
 import Link from "next/link";
-
-import {
-  ArrowUp,
-  //   Github,
-  //   Linkedin,
-  Mail,
-} from "lucide-react";
-
+import {ArrowUp, Mail,} from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 import ResumeButton from "@/components/ui/ResumeButton/ResumeButton";
-
 import styles from "./Footer.module.css";
 
 export default function Footer() {

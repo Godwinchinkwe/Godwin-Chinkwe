@@ -1,24 +1,14 @@
 .button {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 10px;
-
   padding: 14px 22px;
-
   border-radius: 6px;
-
   font-size: 14px;
-
   font-weight: 600;
-
   text-decoration: none;
-
   cursor: pointer;
-
   transition:
     transform 0.25s ease,
     background 0.25s ease,
@@ -31,7 +21,6 @@
 
 .primary {
   background: #805aa3;
-
   color: white;
 }
 
@@ -41,14 +30,11 @@
 
 .secondary {
   border: 1px solid rgba(255, 255, 255, 0.15);
-
   background: transparent;
-
   color: white;
 }
 
 .secondary:hover {
   border-color: #a98024;
-
   color: #a98024;
 }

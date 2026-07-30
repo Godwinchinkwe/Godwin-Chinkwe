@@ -1,5 +1,5 @@
 .footer {
-  padding: 100px 0 30px;
+  padding: 50px 0 30px;
   background: #030303;
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -7,13 +7,17 @@
 
 .container {
   width: min(calc(100% - 48px), 1200px);
-
   margin: 0 auto;
 }
 
 .main {
   display: grid;
-  grid-template-columns:1.5fr1fr1.5fr;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1.5fr;
+
   gap: 80px;
   padding-bottom: 80px;
 }
@@ -35,14 +39,19 @@
 
 .brand p {
   max-width: 300px;
+
   color: #6b7280;
+
   font-size: 14px;
+
   line-height: 1.7;
 }
 
 .socials {
   display: flex;
+
   gap: 10px;
+
   margin-top: 25px;
 }
 
@@ -69,11 +78,8 @@
 
 .column {
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
-
   gap: 14px;
 }
 
@@ -92,7 +98,8 @@
 }
 
 .column a {
-  color: #9ca3af;
+  
+    color: white;
 
   font-size: 14px;
 
@@ -102,7 +109,8 @@
 }
 
 .column a:hover {
-  color: white;
+  /* color: white; */
+  color: #9ca3af;
 }
 
 .column p {
