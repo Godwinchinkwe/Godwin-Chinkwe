@@ -1,29 +1,20 @@
 .hero {
   position: relative;
-
   min-height: 100vh;
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
-
   padding: 140px 24px 100px;
 }
 
 .container {
   position: relative;
-
   z-index: 2;
-
   width: min(100%, 1100px);
-
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
 }
 
@@ -31,42 +22,30 @@
 
 .background {
   position: absolute;
-
   inset: 0;
-
   overflow: hidden;
-
   pointer-events: none;
 }
 
 .gradientOne {
   position: absolute;
-
   width: 600px;
   height: 600px;
-
   top: -200px;
   left: 50%;
-
   transform: translateX(-50%);
-
-  background: radial-gradient(circle, rgba(128, 90, 163, 0.2), transparent 70%);
-
+  background: radial-gradient(circle, var(--background), transparent 70%);
   filter: blur(40px);
 }
 
 .gradientTwo {
   position: absolute;
-
   width: 400px;
   height: 400px;
-
   right: -100px;
   bottom: -100px;
-
-  background: radial-gradient(
-    circle,
-    rgba(169, 128, 36, 0.12),
+  background: radial-gradient(circle,
+    var(--background),
     transparent 70%
   );
 
@@ -91,36 +70,23 @@
 
 .availability {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   padding: 8px 14px;
-
   margin-bottom: 32px;
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   border-radius: 999px;
-
   background: rgba(255, 255, 255, 0.03);
-
   color: #9ca3af;
-
   font-size: 13px;
-
   backdrop-filter: blur(10px);
 }
 
 .statusDot {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   background: #10b981;
-
   box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
 }
 
@@ -141,18 +107,14 @@
 
   font-weight: 700;
 
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .headingAccent {
   display: block;
-
   margin-top: 10px;
-
   background: linear-gradient(120deg, #ffffff, #a98024);
-
   -webkit-background-clip: text;
-
   -webkit-text-fill-color: transparent;
 }
 
@@ -160,13 +122,9 @@
 
 .description {
   max-width: 650px;
-
   margin-top: 32px;
-
   color: #9ca3af;
-
   font-size: 18px;
-
   line-height: 1.7;
 }
 

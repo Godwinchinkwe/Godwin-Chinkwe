@@ -16,7 +16,6 @@ export default function Home() {
         <Expertise />
         <Projects />
         <Contact />
-        {/* <section id="contact" /> */}
       </main>
     </>
   );

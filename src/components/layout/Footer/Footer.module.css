@@ -1,10 +1,7 @@
 .footer {
   padding: 100px 0 30px;
-
   background: #030303;
-
   color: white;
-
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -16,14 +13,8 @@
 
 .main {
   display: grid;
-
-  grid-template-columns:
-    1.5fr
-    1fr
-    1.5fr;
-
+  grid-template-columns:1.5fr1fr1.5fr;
   gap: 80px;
-
   padding-bottom: 80px;
 }
 
@@ -33,57 +24,37 @@
 
 .logo {
   display: inline-block;
-
   margin-bottom: 20px;
-
   color: white;
-
   font-family: var(--font-space), sans-serif;
-
   font-size: 22px;
-
   font-weight: 700;
-
   letter-spacing: -0.04em;
-
   text-decoration: none;
 }
 
 .brand p {
   max-width: 300px;
-
   color: #6b7280;
-
   font-size: 14px;
-
   line-height: 1.7;
 }
 
 .socials {
   display: flex;
-
   gap: 10px;
-
   margin-top: 25px;
 }
 
 .socials a {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   width: 40px;
-
   height: 40px;
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   border-radius: 50%;
-
   color: #9ca3af;
-
   transition:
     color 0.25s ease,
     border-color 0.25s ease,
@@ -92,9 +63,7 @@
 
 .socials a:hover {
   transform: translateY(-3px);
-
   border-color: #a98024;
-
   color: #a98024;
 }
 

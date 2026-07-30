@@ -78,7 +78,7 @@
 .navLink {
   position: relative;
 
-  color: #9ca3af;
+  color: var(--primary);
 
   font-size: 14px;
   font-weight: 500;
@@ -220,7 +220,7 @@
   .mobileNavLink {
     padding: 14px 0;
 
-    color: #9ca3af;
+    color:var(--primary);
 
     text-decoration: none;
 

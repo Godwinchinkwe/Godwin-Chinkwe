@@ -10,11 +10,11 @@ import ThemeToggle from "@/components/ui/ThemeToggle/ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Expertise", href: "#expertise" },
-  { name: "Projects", href: "#projects" },
+  { name: "About", href: "/#about" },
+  { name: "Expertise", href: "/#expertise" },
+  { name: "Projects", href: "/#projects" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -66,7 +66,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           {/* CTA */}
-          <Link href="#contact" className={styles.cta}>
+          <Link href="/#contact" className={styles.cta}>
             Let's Talk
           </Link>
         </div>

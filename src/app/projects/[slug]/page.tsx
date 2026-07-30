@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <main className={styles.notFound}>
         <h1>Project Not Found</h1>
 
-        <Link href="/projects">Back to Projects</Link>
+        <Link href="/#projects">Back to Projects</Link>
       </main>
     );
   }
@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {/* Back Navigation */}
 
       <div className={styles.container}>
-        <Link href="/projects" className={styles.backLink}>
+        <Link href="/#projects" className={styles.backLink}>
           <ArrowLeft size={18} />
           Back to Projects
         </Link>
